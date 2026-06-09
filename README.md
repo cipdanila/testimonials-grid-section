@@ -14,10 +14,10 @@ Users should be able to:
 
 ![Design Preview](./design/desktop-design.jpg)
 
-### Links
+## Links
 
-- Solution URL: [Add your GitHub repo link here](https://github.com/cipdanila/testimonials-grid-section)
-- Live Site URL: [[Add your GitHub Pages live deployment link here](https://cipdanila.github.io/testimonials-grid-section/)]
+- Solution URL: [https://github.com/cipdanila/testimonials-grid-section](https://github.com/cipdanila/testimonials-grid-section)
+- Live Site URL: [https://cipdanila.github.io/testimonials-grid-section/](https://cipdanila.github.io/testimonials-grid-section/)
 
 ## My Process
 
