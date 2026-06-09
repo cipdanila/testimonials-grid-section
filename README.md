@@ -16,8 +16,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add your GitHub repository link here]
-- Live Site URL: [Add your GitHub Pages live deployment link here]
+- Solution URL: [Add your GitHub repo link here](https://github.com/cipdanila/testimonials-grid-section)
+- Live Site URL: [[Add your GitHub Pages live deployment link here](https://cipdanila.github.io/testimonials-grid-section/)]
 
 ## My Process
 
