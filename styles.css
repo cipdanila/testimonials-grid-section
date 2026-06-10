@@ -90,8 +90,8 @@ main {
 .profile-header {
   display: flex;
   align-items: center;
-  gap: 1.0625rem;                      
-  margin-block-end: 1.125rem;          
+  gap: 1.0625rem;           
+  margin-block-end: calc(1.125rem); 
   transform: translate(-0.125rem, 0.3125rem); 
 }
 
@@ -297,17 +297,18 @@ main {
   }
 
   .profile-header {
-    transform: translate(-0.625rem, -0.625rem); /* Converted -10px, -10px */
+    transform: translate(-0.625rem, -0.625rem); 
   }
 
   .profile-meta {
-    transform: translate(-0.1875rem, 0.0625rem); /* Converted -3px, 1px */
+    transform: translate(-0.1875rem, 0.0625rem); 
   }
 
   .testimonials-grid .testimonial-body {
-    transform: translate(-0.5625rem, 0.3125rem); /* Converted -9px, 5px */
+    transform: translate(-0.5625rem, 0.3125rem); 
   }
 
+  /* Keep this exactly here to protect the vertical cascade order */
   .card-daniel + .card-jonathan,
   .card-jonathan + .card-jeanette,
   .card-jeanette + .card-patrick,
@@ -325,7 +326,7 @@ main {
     margin-inline: auto;
     /* End of Figma spec. */
     align-items: stretch;              /* Ensures uniform row height rendering */
-    transform: translate(0rem, 1.5rem); /* Converted 0px, 24px Macro-calibrated nudge */
+    transform: translate(0rem, 1.5rem); 
   }
 
   /* ==========================================================================
@@ -333,118 +334,116 @@ main {
      ========================================================================== */
 
   /* --- Card: Daniel --- */
-  .card-daniel {
+  .testimonials-grid .card-daniel {
     /* Figma spec. DO NOT TOUCH. */
     grid-column: 1 / 3;
     grid-row: 1;
-    background-position: top 0 right 3.8125rem; /* Converted 61px blueprint offset */
+    background-position: top 0 right 3.8125rem; 
     /* End of Figma spec. */
     align-self: start; 
-    height: calc(100% - 1rem); /* Converted -16px height trim */
+    height: calc(100% - 1rem); 
   }
 
   .card-daniel .lead-text {
-    line-height: 1.5rem; /* Converted 24px */
-    margin-inline-end: -0.75rem; /* Converted -12px horizontal expansion */ 
-    margin-block-end: 1rem; /* Converted 16px vertical separation */
+    line-height: 1.5rem; 
+    margin-inline-end: -0.75rem; 
+    margin-block-end: 1rem; 
   }
 
   .card-daniel .quote-text {
-    line-height: 1.125rem; /* Converted 18px */
-    margin-inline-end: -0.75rem; /* Converted -12px horizontal expansion */
+    line-height: 1.125rem; 
+    margin-inline-end: -0.75rem; 
   }
 
   /* --- Card: Jonathan --- */
-  .card-jonathan {
+  .testimonials-grid .card-jonathan {
     /* Figma spec. DO NOT TOUCH. */
     grid-column: 3;
     grid-row: 1;
     /* End of Figma spec. */
     align-self: start;                 
-    height: calc(100% - 1rem); /* Converted -16px height trim */        
-    transform: translateX(0.125rem); /* Converted 2px nudge */       
+    height: calc(100% - 1rem);         
+    transform: translateX(0.125rem);        
   }
 
   .card-jonathan .lead-text {
-    margin-inline-end: -0.8125rem; /* Converted -13px horizontal expansion */         
-    transform: translateY(-0.5625rem); /* Converted -9px lift */      
+    margin-inline-end: -0.8125rem;          
+    transform: translateY(-0.5625rem);       
   }
 
   .card-jonathan .quote-text {
-    margin-inline-end: -0.8125rem; /* Converted -13px horizontal expansion */         
-    transform: translateY(0.375rem); /* Converted 6px push */       
+    margin-inline-end: -0.8125rem;          
+    transform: translateY(0.375rem);        
   }
 
   /* --- Card: Jeanette --- */
-  .card-jeanette {
+  .testimonials-grid .card-jeanette {
     /* Figma spec. DO NOT TOUCH. */
     grid-column: 1;
     grid-row: 2;
     /* End of Figma spec. */
   }
 
+  .card-jeanette .profile-status {
+    transform: translateY(-0.0625rem); 
+  }
+
+  .card-jeanette .testimonial-body {
+    transform: translate(-0.5625rem, -0.3125rem); 
+  }
+
+  .card-jeanette .quote-text {
+    margin-inline-end: -0.75rem; 
+    transform: translateY(0.9375rem);        
+  }
+
   /* --- Card: Patrick --- */
-  .card-patrick {
+  .testimonials-grid .card-patrick {
     /* Figma spec. DO NOT TOUCH. */
     grid-column: 2 / 4;
     grid-row: 2;
     /* End of Figma spec. */ 
-    translate: 0.125rem 0rem; /* Converted 2px 0px independent layout fix */
+    translate: 0.125rem 0rem; 
   }
 
-  /* Macro Row 2 Leveling & Height Trim Layer — Outside Figma Spec */
-  .card-jeanette,
-  .card-patrick {
-    align-self: start;
-    height: calc(100% - 1.125rem); /* Converted -18px vertical structural trim */        
-    transform: translateY(-1.3125rem); /* Converted -21px symmetrical layout lift */     
-  }
-
-  .card-jeanette .profile-status {
-    transform: translateY(-0.0625rem); /* Converted -1px */
-  }
-
-  .card-jeanette .testimonial-body {
-    transform: translate(-0.5625rem, -0.3125rem); /* Converted -9px, -5px micro-nudge */
-  }
-
-  .card-jeanette .quote-text {
-    margin-inline-end: -0.75rem; /* Converted -12px horizontal expansion */
-    transform: translateY(0.9375rem); /* Converted 15px lift */       
-  }
-
-  /* Extends the text lines horizontally */
   .card-patrick .lead-text,
   .card-patrick .quote-text {
-    margin-inline-end: -0.8125rem; /* Converted -13px horizontal expansion */         
+    margin-inline-end: -0.8125rem;          
   }
 
-  /* Amortization Layer: Prevents the row from collapsing and shifting Jeanette */
   .card-patrick .quote-text {
-    transform: translateY(1rem); /* Converted 16px push */      
-    margin-block-end: 1.125rem; /* Converted 18px horizontal-to-vertical ballast link */           
-    margin-inline-end: -1rem; /* Converted -16px overwrite pack */         
+    transform: translateY(1rem);       
+    margin-block-end: 1.125rem;            
+    margin-inline-end: -1rem;          
   }
 
   /* --- Card: Kira --- */
-  .card-kira {
+  .testimonials-grid .card-kira {
     /* Figma spec. DO NOT TOUCH. */
     grid-column: 4;
     grid-row: 1 / 3;
     /* End of Figma spec. */
     align-self: start;                 
-    height: calc(100% - 2.25rem); /* Converted -36px vertical trim */        
-    transform: translateX(0.1875rem); /* Converted 3px nudge */       
+    height: calc(100% - 2.25rem);         
+    transform: translateX(0.1875rem);        
   }
 
   .card-kira .lead-text {
-    margin-inline-end: -0.75rem; /* Converted -12px horizontal expansion */         
+    margin-inline-end: -0.75rem;          
   }
 
   .card-kira .quote-text {
-    transform: translateY(0.9375rem); /* Converted 15px push */      
-    margin-block-end: 3.375rem; /* Converted 54px horizontal-to-vertical ballast link */           
-    margin-inline-end: -1rem; /* Converted -16px overwrite pack */         
+    transform: translateY(0.9375rem);       
+    margin-block-end: 3.375rem;            
+    margin-inline-end: -1rem;          
+  }
+
+  /* Macro Row 2 Leveling & Height Trim Layer — Placed securely here to preserve original cascade */
+  .card-jeanette,
+  .card-patrick {
+    align-self: start;
+    height: calc(100% - 1.125rem);         
+    transform: translateY(-1.3125rem);      
   }
 }
 
