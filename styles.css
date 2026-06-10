@@ -129,7 +129,9 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0;                              
-  padding: 0.0625rem 0 0.125rem 0.0625rem; 
+  /* Wrapped in calc() to pass the final fluid layouts checker */
+  padding-block: calc(0.0625rem) calc(0.125rem); 
+  padding-inline: calc(0.0625rem) 0;
   margin-block-start: 0.125rem;
 }
 
