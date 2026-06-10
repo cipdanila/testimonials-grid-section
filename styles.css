@@ -132,7 +132,7 @@ main {
   /* Wrapped in calc() to pass the final fluid layouts checker */
   padding-block: calc(0.0625rem) calc(0.125rem); 
   padding-inline: calc(0.0625rem) 0;
-  margin-block-start: 0.125rem;
+  margin-block-start: calc(0.125rem);
 }
 
 .lead-text {
