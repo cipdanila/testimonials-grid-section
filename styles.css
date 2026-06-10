@@ -190,7 +190,7 @@ main {
 .card-jeanette .profile-name { color: var(--color-dark-blue); }
 .card-jeanette .profile-status { color: var(--color-grey-500); opacity: 0.55; }
 .card-jeanette .lead-text { color: var(--color-dark-blue); }
-.card-jeanette .quote-text { color: var(--color-grey-400); margin-block-end: -0.4375rem; } 
+.card-jeanette .quote-text { color: var(--color-grey-400); margin-block-end: calc(-0.4375rem); } 
 .card-jeanette .testimonial-body { transform: translateY(-0.125rem); }
 
 /* --- Patrick — Dark blue --- */
@@ -210,7 +210,7 @@ main {
 .card-kira .profile-name { color: var(--color-dark-blue); }
 .card-kira .profile-status { color: var(--color-grey-500); opacity: 0.55; }
 .card-kira .lead-text { color: var(--color-dark-blue); }
-.card-kira .quote-text { color: var(--color-grey-400); margin-block-end: -0.375rem; }
+.card-kira .quote-text { color: var(--color-grey-400); margin-block-end: calc(-0.375rem); }
 
 /* --- Mobile Stack Margins (Placed at the end for correct specificity cascade) --- */
 .card-daniel + .card-jonathan,
@@ -296,6 +296,14 @@ main {
     transform: none;
     margin-block-start: 0;
     margin-block-end: 0;
+  }
+
+  /* Macro Row 2 Leveling & Height Trim Layer — Placed securely here to preserve original cascade */
+  .card-jeanette,
+  .card-patrick {
+    align-self: start;
+    height: calc(100% - calc(1.125rem));         
+    transform: translateY(calc(-1 * 1.3125rem));      
   }
 
   .profile-header {
@@ -438,14 +446,6 @@ main {
     transform: translateY(calc(0.9375rem));       
     margin-block-end: calc(3.375rem);            
     margin-inline-end: calc(-1 * 1rem);          
-  }
-
-  /* Macro Row 2 Leveling & Height Trim Layer — Placed securely here to preserve original cascade */
-  .card-jeanette,
-  .card-patrick {
-    align-self: start;
-    height: calc(100% - calc(1.125rem));         
-    transform: translateY(calc(-1 * 1.3125rem));      
   }
 }
 
