@@ -80,7 +80,7 @@ main {
 .testimonial-card {
   border-radius: 0.5rem;
   box-shadow: var(--shadow-card);
-  padding: 1.625rem 2rem 2rem 2rem;    
+  padding-block: calc(1.625rem) calc(2rem);
   height: auto; 
   width: 100%;  
   display: flex;
@@ -129,7 +129,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0;                              
-  padding: 0.0625rem 0 0.125rem 0.0625rem; 
+  padding-block: calc(0.0625rem) calc(0.125rem); 
+  padding-inline: calc(0.0625rem) 0;
   margin-block-start: 0.125rem;
 }
 
@@ -296,7 +297,7 @@ main {
     transform: translate(-0.625rem, -0.625rem); /* -10px, -10px */
   }
 
-  .testimonial-body {
+  .testimonials-grid .testimonial-body {
     transform: translate(-0.5625rem, 0.3125rem); /* -9px, 5px */
   }
 
