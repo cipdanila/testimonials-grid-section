@@ -36,7 +36,7 @@ html {
 
 body {
   font-family: var(--font-main);
-  font-size: 0.8125rem;   
+  font-size: clamp(0.75rem, 0.8vw, 0.8125rem);
   font-weight: var(--font-weight-medium);
   line-height: 1.5;
   background-color: var(--color-grey-100);
@@ -64,6 +64,18 @@ main {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* Disable animations for users with motion sickness preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* ==========================================================================
@@ -151,7 +163,7 @@ main {
 
 .text-nudge-segment {
   display: inline-block;
-  letter-spacing: -0.015px;
+  letter-spacing: -0.001em;
   word-spacing: 0.1px;
   padding-inline-start: 0.1875rem;     
 }
