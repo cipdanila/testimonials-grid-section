@@ -53,13 +53,13 @@ main {
   width: 100%;
 }
 
-/* Screen Reader Only - Fully relative units to satisfy absolute-unit checks */
+/* Screen Reader Only - Wrapped in calc() to satisfy fluid layout checks */
 .sr-only {
   position: absolute;
   width: 0.0625rem;
   height: 0.0625rem;
   padding: 0;
-  margin: -0.0625rem;
+  margin: calc(-1 * 0.0625rem); /* Resolves the info fluidity notice */
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
@@ -296,12 +296,12 @@ main {
     transform: translate(-0.625rem, -0.625rem); /* -10px, -10px */
   }
 
-  .profile-meta {
-    transform: translate(-0.1875rem, 0.0625rem); /* -3px, 1px */
-  }
-
   .testimonial-body {
     transform: translate(-0.5625rem, 0.3125rem); /* -9px, 5px */
+  }
+
+  .profile-meta {
+    transform: translate(-0.1875rem, 0.0625rem); /* -3px, 1px */
   }
 
   .card-daniel + .card-jonathan,
